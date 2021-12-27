@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "267194162656",
+    "project_id": "routine-e49bb",
+    "storage_bucket": "routine-e49bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267194162656:android:ca22b6e3675c4965bb5f85",
+        "android_client_info": {
+          "package_name": "com.example.play_routine_01"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267194162656-7t49a5ulh9vqvgj8l19nvheo9954dsl8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJlFtn1eoIWVax3NFgsiMXMVroBBt6ei8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "267194162656-7t49a5ulh9vqvgj8l19nvheo9954dsl8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
