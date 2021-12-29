@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
 
 import 'theme/app_theme.dart';
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       builder: () {
-        return MaterialApp(
+        return GetMaterialApp(
           title: "themeing",
           theme: AppTheme.regularTheme,
           home: const MyHomePage(),
