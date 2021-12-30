@@ -1,59 +1,32 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:winter/controllers/auth_controller.dart';
+import 'package:winter/routes/app_pages.dart';
 
 import 'theme/app_theme.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized(); // 공부하기
+  await Firebase.initializeApp();
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  // final navigationController = Get.put(NavigationController());
+  final authController = Get.put(AuthController());
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(375, 812),
-      builder: () {
-        return GetMaterialApp(
-          title: "themeing",
-          theme: AppTheme.regularTheme,
-          home: const MyHomePage(),
-        );
-      },
+      designSize: const Size(375, 800),
+      builder: () => GetMaterialApp(
+        theme: AppTheme.regularTheme,
+        title: 'BoilerPlate',
+        initialRoute: AppPages.INITIAL,
+        getPages: AppPages.routes,
+      ),
     );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key}) : super(key: key);
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(),
-        body: Column(
-          children: [
-            TextButton(
-              child: Text("hi"),
-              onPressed: () {},
-            ),
-            ElevatedButton(
-              child: Text("hi"),
-              onPressed: () {},
-            ),
-            OutlinedButton(
-              child: Text("hi"),
-              onPressed: () {},
-            ),
-          ],
-        ));
   }
 }
