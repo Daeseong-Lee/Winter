@@ -8,13 +8,9 @@ class AppPages {
 
   static final routes = [
     GetPage(name: Routes.SPLASH, page: () => SplashScreen()),
-    // GetPage(
-    //     name: Routes.LOGIN,
-    //     page: () => LoginScreen()
-    // ),
-    // GetPage(
-    //     name: Routes.HOME,
-    //     page: () => HomeScreen()
-    // ),
+    GetPage(name: Routes.LOGIN, page: () => 
+    // LoginScreen()),
+    GetPage(name: Routes.HOME, page: () => 
+    // HomeScreen()),
   ];
 }
